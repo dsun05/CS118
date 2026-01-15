@@ -9,7 +9,7 @@ To understand why the Internet uses packet switching rather than the legacy circ
 
 **Comparison:**
 1.  **Circuit Switching:** This method reserves resources regardless of usage. Since each user requires 100 kb/s, the link can support exactly:
-    $$ \frac{1,000 \text{ kb/s}}{100 \text{ kb/s}} = 10 \text{ users} $$
+    $\frac{1,000 \text{ kb/s}}{100 \text{ kb/s}} = 10 \text{ users}$
     Even if these users are silent, the bandwidth is locked, preventing others from using it.
 
 2.  **Packet Switching:** This method allocates resources on demand. Statistical multiplexing allows us to support many more users (e.g., $N = 35$) because it is statistically unlikely that all users will be active simultaneously.
@@ -177,7 +177,7 @@ The Internet uses a 5-layer stack (often referred to as the TCP/IP stack).
 
 ### 4.4 Encapsulation & Decapsulation
 As data moves from the source to the destination, it passes through the stack.
-1.  **Encapsulation (Source):** The application sends a **Message**. The Transport layer adds a header (H_t) to create a **Segment**. The Network layer adds a header (H_n) to create a **Datagram**. The Link layer adds a header (H_l) to create a **Frame**.
+1.  **Encapsulation (Source):** The application sends a **Message**. The Transport layer adds a header ($H_t$) to create a **Segment**. The Network layer adds a header ($H_n$) to create a **Datagram**. The Link layer adds a header ($H_l$) to create a **Frame**.
 2.  **Intermediate Devices:**
     *   **Switches:** Process up to the Link layer (Physical $\rightarrow$ Link).
     *   **Routers:** Process up to the Network layer (Physical $\rightarrow$ Link $\rightarrow$ Network).
