@@ -200,6 +200,6 @@ The historical alternative to packet switching is **Circuit Switching** (used in
 *   *Scenario:* A 1 Mbps link. Each user needs 100 kbps but is only active 10% of the time ($p=0.1$).
 *   **Circuit Switching limit:** Max 10 users ($1 \text{ Mbps} / 100 \text{ kbps}$).
 *   **Packet Switching capability:** With 35 users ($N=35$), we use binomial probability to calculate the chance of congestion (more than 10 users active simultaneously).
-    $$ P(\text{active} > 10) = 1 - \sum_{x=0}^{10} \binom{35}{x} p^x (1-p)^{35-x} $$
+    $P(\text{active} > 10) = 1 - \sum_{x=0}^{10} \binom{35}{x} p^x (1-p)^{35-x}$
 *   The result is less than 0.0004 (0.04%).
 *   **Conclusion:** Packet switching allows **3 times the number of users** (35 vs 10) with negligible probability of congestion.
